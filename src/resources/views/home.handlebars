@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="css/home.css">
+<nav>
+  <a href="/watch-movie">Trang chủ</a>
+  <a href="">Phim mới</a>
+  <a href="/categories?c=Romance">Romance</a>
+  <a href="/categories?c=Hành động">Hành động</a>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle nav-other-button" type="button" id="dropdown-menu-button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      Khác
+    </button>
+    <div class="dropdown-menu nav-other-menu" aria-labelledby="dropdownMenuButton">
+      <a class="nav-other-menu_item" href="/categories?c=Phiêu lưu">Phiêu lưu</a>
+      <a class="nav-other-menu_item" href="/categories?c=Hài hước">Hài hước</a>
+      <a class="nav-other-menu_item" href="#">Tất cả</a>
+    </div>
+  </div>
+</nav>
+<div class="background-video">
+  <video autoplay muted loop id="home-background">
+    <source src="https://giant.gfycat.com/HairyCheeryLeafcutterant.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="home-content">
+  <button class="home-content_button "><a href="/watch-movie">Xem phim</a></button>
+</div>
+
+
+<script>
+  $('body').css('background-color', 'white');
+</script>

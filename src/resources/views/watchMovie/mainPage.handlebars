@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="css/watchMovie.mainPage.css">
+<div id="background">
+    <img src="../../../images/background.jpg" alt="">
+</div>
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="nav-bar">
+                <nav>
+                    <a class="nav-item" href="/watch-movie">Trang chủ</a>
+                    <a class="nav-item" href="">Phim mới</a>
+                    <a class="nav-item" href="/categories?c=Romance">Romance</a>
+                    <a class="nav-item" href="/categories?c=Hành động">Hành động</a>
+                    <div class="dropdown nav-item">
+                        <button class="btn dropdown-toggle nav-other-button" type="button" id="dropdown-menu-button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Khác
+                        </button>
+                        <div class="dropdown-menu nav-other-menu">
+                            <a class="nav-other-menu_item" href="/categories?c=Phiêu lưu">Phiêu lưu</a>
+                            <a class="nav-other-menu_item" href="/categories?c=Hài hước">Hài hước</a>
+                            <a class="nav-other-menu_item" href="#">Tất cả</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            <h1 class="list-title">HOT</h1>
+            <div class="hot-list">
+                <div class="left-angle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                {{#each hotThreeMovies}}
+                <div class="hot-list_item top-{{inc @index}}">
+                    <div class="hot-list_item-image">
+
+                        <a href="/watch-movie/{{slug}}/details">
+                            <div class="playButton">
+                                <i class=" fa-solid fa-play" style="font-size: 20px; text-align: center"></i>
+                            </div>
+                            <img src="{{image}}" alt="{{script}}">
+                            <div class="hot-list_item-name">
+                                <p>{{filmName}}</p>
+                                <span>{{views}} lượt xem</span>
+                            </div>
+                            <span class="ranking" id="rank-{{inc @index}}">{{inc @index}}</span>
+                        </a>
+                    </div>
+                </div>
+                {{/each}}
+
+                {{#each otherHotMovies}}
+                <div class="hot-list_item">
+                    <div class="hot-list_item-image">
+
+                        <a href="/watch-movie/{{slug}}/details">
+                            <div class="playButton">
+                                <i class=" fa-solid fa-play" style="font-size: 20px;"></i>
+                            </div>
+                            <img src="{{image}}" alt="{{script}}">
+                            <div class="hot-list_item-name">
+                                <p>{{filmName}}</p>
+                                <span>{{views}} lượt xem</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{/each}}
+
+                <div class="right-angle">
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md">
+            <div class="new-movies_title">
+                <h3>Phim mới</h3>
+            </div>
+            <div class="new-movies-list">
+                {{#each newMovies}}
+                <div class="new-movies-list_item">
+                    <div class="new-movies-list_item-image">
+                        <a href="/watch-movie/{{slug}}/details">
+                            <div class="playButton">
+                                <i class=" fa-solid fa-play" style="font-size: 20px;"></i>
+                            </div>
+                            <img src="{{image}}" alt="{{script}}">
+                            <div class="new-movies-list_item-name">
+                                <p>{{filmName}}</p>
+                                <span>{{views}} lượt xem</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../js/slideShows.js"></script>
+<script src="../js/backgroundResponsive.js"></script>

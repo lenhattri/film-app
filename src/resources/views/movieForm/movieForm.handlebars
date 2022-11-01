@@ -1,0 +1,42 @@
+<!--Jquery validate plugin-->
+
+<!--Import CSS-->
+<link rel="stylesheet" href="css/movieForm.css">
+
+<div class="container">
+    <div class="database_list">
+        <h1>Movie Databases</h1>
+        <button class="btn btn-success"><a href="movie-form/create#" style="color:white;text-decoration: none">+Thêm</a></button>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Tên phim</th>
+                    <th>Thể loại</th>
+                    <th>Cập nhật</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each movies}}
+                <tr>
+                    <td>{{filmName}}</td>
+                    <td>{{categories}}</td>
+                    <td>{{updatedAt}}</td>
+                    <td><button class="btn btn-primary"><a href="/movie-form/{{this._id}}/edit#"
+                                style="color:white;text-decoration: none">Sửa</a></button></td>
+                    <td><button class="btn btn-danger"><a href="movie-form/{{this._id}}/delete"
+                                style="color:white;text-decoration: none">Xoá</a></button></td>
+                </tr>
+                {{/each}}
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--Content-->
+
+

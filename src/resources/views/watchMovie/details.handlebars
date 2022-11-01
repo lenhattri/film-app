@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/watchMovie.details.css">
+
+
+
+<div id="background">
+    <img src="{{movie.image}}" alt="">
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="nav-bar">
+                <nav>
+                    <a class="nav-item" href="/watch-movie">Trang chủ</a>
+                    <a class="nav-item" href="">Phim mới</a>
+                    <a class="nav-item" href="/categories?c=Romance">Romance</a>
+                    <a class="nav-item" href="/categories?c=Hành động">Hành động</a>
+                    <div class="dropdown nav-item">
+                        <button class="btn dropdown-toggle nav-other-button" type="button" id="dropdown-menu-button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Khác
+                        </button>
+                        <div class="dropdown-menu nav-other-menu">
+                            <a class="nav-other-menu_item" href="/categories?c=Phiêu lưu">Phiêu lưu</a>
+                            <a class="nav-other-menu_item" href="/categories?c=Hài hước">Hài hước</a>
+                            <a class="nav-other-menu_item" href="#">Tất cả</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row " style="margin-top:20px">
+        <div class="col-lg-4">
+            <div class="details">
+                <div class="details_image-block">
+                    <div class="details_image-block_image">
+                        <a href="" id="movie-poster"><img class="#movie-poster" src="{{movie.image}}"
+                                alt="{{movie.sript}}"></a>
+                    </div>
+                    <div class="details_button-list">
+                         <button class="btn btn-primary button-list_play-button"><a
+                                href="/watch-movie/{{movie.slug}}/details/watching">Xem phim</a></button>
+                        <button class="btn btn-danger button-list_report-button"><a href="#">Báo cáo</a></button>
+                    </div>
+                </div>
+                <div class="details_information-block">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="details_information">
+                <h1>{{movie.filmName}}</h1>
+                <span class="details_information_categories"><i class="fas fa-tags"></i> {{#each movie.categories as
+                    |category|}} <a href="/categories?c={{category}}">{{category}}</a>{{/each}} </span>
+                <span class="details_information_release-date"><i class="fa-solid fa-clock"></i>
+                    {{movie.release}}</span>
+                <!---->
+                <div class="details-button-list--responsive">
+                     <button class="btn btn-primary button-list_play-button"><a
+                                href="/watch-movie/{{movie.slug}}/details/watching">Xem phim</a></button>
+                     <button class="btn btn-danger button-list_report-button"><a href="#">Báo cáo</a></button>
+                </div>
+                <!---->
+                <p class="details_information_script"><strong style="color: rgb(11, 184, 11);">Giới
+                        thiệu:</strong>{{movie.script}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+<!--Script import-->

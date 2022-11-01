@@ -1,0 +1,45 @@
+{
+  "name": "film-app",
+  "version": "1.0.0",
+  "description": "This is the film-app project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js localhost 3000",
+    "watch": "node-sass --watch src/resources/scss/ --output src/public/css/"
+  },
+  "keywords": [
+    "film",
+    "phim",
+    "phim",
+    "hay",
+    "netflix",
+    "xem",
+    "phim",
+    "mien",
+    "phi"
+  ],
+  "author": "Le Nhat Tri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "JSON": "^1.0.0",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.2",
+    "bson": "^4.6.1",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.0",
+    "mongoose": "^6.2.4",
+    "mongoose-paginate-v2": "^1.6.2",
+    "mongoose-slug-hero": "^1.1.1",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7"
+  }
+}

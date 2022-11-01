@@ -1,0 +1,64 @@
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+
+<link rel="stylesheet" href="../css/movieFormCreate.css">
+
+<div class="container">
+    <h1>Chỉnh sửa</h1>
+    <div class="row">
+        <div class="col-md-6 enter_movie_form">
+            <form action="/movie-form/{{movie._id}}/edit" method="post" id="editForm">
+                <div class="form-group">
+                    <label for="filmName">Name</label>
+                    <input type="text" class="form-control" name="filmName" id="filmName" value="{{movie.filmName}}"
+                        aria-describedby="filmName" placeholder="Enter film's name">
+                </div>
+                <div class="form-group">
+                    <label for="categories">Categories</label>
+                    <input type="text" class="form-control" value="{{movie.categories}}" name="categories"
+                        id="categories" aria-describedby="categories" placeholder="Enter film's categories">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="text" class="form-control" value="{{movie.image}}" name="image" id="image"
+                        aria-describedby="image" placeholder="Enter the link image">
+                </div>
+                <div class="form-group">
+                    <label for="release">Release</label>
+                    <input type="date" class="form-control" value="{{movie.release}}" name="release" id="release"
+                        aria-describedby="name" placeholder="Enter the time release">
+                </div>
+                <div class="form-group">
+                    <label for="script">Script</label>
+                    <textarea class="form-control" id="script" name="script" aria-describedby="name"
+                        placeholder="Enter film'script"> {{movie.script}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="embed">Embed</label>
+                    <input type="text" class="form-control" value="{{movie.embed}}" name="embed" id="embed"
+                        aria-describedby="name" placeholder="Enter the embed tag">
+                </div>
+                <input type="submit" id="buttonForm" value="Sửa" class="btn btn-primary">
+
+            </form>
+        </div>
+    </div>
+
+</div>
+<script>
+    $('#buttonForm').confirm({
+        title: 'Xác nhận',
+        content: 'Bạn có chắc chắn muốn chỉnh sửa không?',
+        buttons: {
+            confirm: {
+                text: 'Xác nhận',
+                action: function () {
+                    $('#editForm').submit();
+                }
+            },
+            cancel: {
+                text: 'Huỷ bỏ'
+            },
+        }
+    });
+</script>
